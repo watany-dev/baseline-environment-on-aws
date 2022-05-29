@@ -7,7 +7,7 @@ export class BLEAConfigCtGuardrailStack extends cdk.Stack {
     super(scope, id, props);
 
     // https://github.com/awslabs/aws-config-rules/tree/master/aws-config-conformance-packs
-    new cfn_inc.CfnInclude(this, 'ConfigCtGra', {
+    new cfn_inc.CfnInclude(this, 'ConfigCtGraa', {
       templateFile: 'cfn/AWS-Control-Tower-Detective-Guardrails.yaml',
     });
   }
