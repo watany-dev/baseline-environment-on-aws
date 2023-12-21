@@ -18,8 +18,10 @@
   "scripts": {
     "depcheck": "depcheck",
     "lint": "eslint --fix .",
+    "lint:b": "npx @biomejs/biome lint --apply-unsafe ./",
     "lint:ci": "eslint .",
     "format": "prettier --write .",
+    "format:b": "npx @biomejs/biome format ./ --write",
     "format:ci": "prettier --check .",
     "release": "standard-version"
   },
