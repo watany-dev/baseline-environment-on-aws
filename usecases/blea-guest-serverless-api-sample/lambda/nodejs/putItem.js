@@ -1,11 +1,10 @@
-'use strict';
 
 const AWSXRay = require('aws-xray-sdk');
 const AWS = AWSXRay.captureAWS(require('aws-sdk'));
 const ddb = new AWS.DynamoDB();
 
 module.exports.putItem = (event, context, callback) => {
-  var datetime = new Date(Date.now()).toString();
+  const datetime = new Date(Date.now()).toString();
   const request = JSON.parse(event.body);
   const params = {
     TableName: process.env.DDB_TABLE,

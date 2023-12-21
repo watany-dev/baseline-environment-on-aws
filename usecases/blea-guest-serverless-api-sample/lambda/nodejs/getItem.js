@@ -1,11 +1,10 @@
-'use strict';
 const AWSXRay = require('aws-xray-sdk');
 const AWS = AWSXRay.captureAWS(require('aws-sdk'));
 const ddb = new AWS.DynamoDB();
 
 const tableName = process.env.DDB_TABLE;
 module.exports.getItem = (event, context, callback) => {
-  var params = {
+  const params = {
     KeyConditionExpression: 'title = :title',
     ExpressionAttributeValues: {
       ':title': { S: event.pathParameters.title.toString() },

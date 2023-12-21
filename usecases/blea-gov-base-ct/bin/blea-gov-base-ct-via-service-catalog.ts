@@ -1,5 +1,5 @@
 import * as cdk from 'aws-cdk-lib';
-import { BLEAGovBaseCtScStack as BLEAGovBaseCtScStack } from '../lib/stack/blea-gov-base-ct-via-service-catalog-stack';
+import { BLEAGovBaseCtScStack } from '../lib/stack/blea-gov-base-ct-via-service-catalog-stack';
 
 // Import parameters for each enviroment
 import { devParameter } from '../parameter';

@@ -1,5 +1,5 @@
 import * as cdk from 'aws-cdk-lib';
-import { BLEAGovBaseCtPipelineStack as BLEAGovBaseCtPipelineStack } from '../lib/stack/blea-gov-base-ct-via-cdk-pipelines-stack';
+import { BLEAGovBaseCtPipelineStack } from '../lib/stack/blea-gov-base-ct-via-cdk-pipelines-stack';
 
 // Import parameters for each enviroment
 import { devPipelineParameter, devParameter } from '../parameter';

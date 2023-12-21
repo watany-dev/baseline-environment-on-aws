@@ -27,7 +27,7 @@ export class Canary extends Construct {
     //
 
     // Create artifact bucket and apply some security settings.
-    const canaryArtifactBucket = new s3.Bucket(this, `CanaryArtifactBucket`, {
+    const canaryArtifactBucket = new s3.Bucket(this, 'CanaryArtifactBucket', {
       accessControl: s3.BucketAccessControl.PRIVATE,
       encryption: s3.BucketEncryption.S3_MANAGED,
       blockPublicAccess: s3.BlockPublicAccess.BLOCK_ALL,

@@ -6,7 +6,7 @@ import { BLEAEcsAppFrontendStack } from '../lib/stack/blea-guest-ecs-app-fronten
 import { BLEAEcsAppMonitoringStack } from '../lib/stack/blea-guest-ecs-app-monitoring-stack';
 import { Template } from 'aws-cdk-lib/assertions';
 
-test(`Snapshot test for BLEA ECS App Stacks`, () => {
+test('Snapshot test for BLEA ECS App Stacks', () => {
   const app = new App();
   const ecsapp = new BLEAEcsAppStack(app, 'Dev-BLEAEcsApp', {
     // Account and Region on test

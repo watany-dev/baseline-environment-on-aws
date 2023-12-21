@@ -78,7 +78,7 @@ export class LambdaNodejs extends Construct {
       new iam.PolicyStatement({
         effect: iam.Effect.ALLOW,
         actions: ['dynamodb:Query', 'dynamodb:GetItem'],
-        resources: [props.table.tableArn, props.table.tableArn + '/index/*'],
+        resources: [props.table.tableArn, `${props.table.tableArn}/index/*`],
       }),
     );
     this.getItemFunction = getItemFunction;
@@ -165,7 +165,7 @@ export class LambdaNodejs extends Construct {
       new iam.PolicyStatement({
         effect: iam.Effect.ALLOW,
         actions: ['dynamodb:Query', 'dynamodb:Scan'],
-        resources: [props.table.tableArn, props.table.tableArn + '/index/*'],
+        resources: [props.table.tableArn, `${props.table.tableArn}/index/*`],
       }),
     );
     this.listItemsFunction = listItemsFunction;
@@ -251,7 +251,7 @@ export class LambdaNodejs extends Construct {
       new iam.PolicyStatement({
         effect: iam.Effect.ALLOW,
         actions: ['dynamodb:PutItem'],
-        resources: [props.table.tableArn, props.table.tableArn + '/index/*'],
+        resources: [props.table.tableArn, `${props.table.tableArn}/index/*`],
       }),
     );
     this.putItemFunction = putItemFunction;

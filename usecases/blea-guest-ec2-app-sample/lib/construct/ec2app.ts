@@ -154,7 +154,7 @@ export class Ec2App extends Construct {
         ],
       });
       // Tags for AppServers
-      cdk.Tags.of(instance).add('Name', 'AppServer' + i, { applyToLaunchedInstances: true });
+      cdk.Tags.of(instance).add('Name', `AppServer${i}`, { applyToLaunchedInstances: true });
       instanceIdTargets.push(new elbv2targets.InstanceIdTarget(instance.instanceId, 80));
     }
 
